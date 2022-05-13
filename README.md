@@ -47,7 +47,7 @@ tar -xvzf prometheus-2.35.0.linux-amd64.tar.gz
 2. Запуск prometheus:
 
 ```bash
-screen -dmS prometheus_screen prometheus-2.35.0.linux-amd64/prometheus --config.file=/home/hl-load-balancer/prometheus.yml
+screen -dmS prometheus_screen prometheus-2.35.0.linux-amd64/prometheus --config.file=/root/hl-load-balancer/prometheus.yml
 ```
 
 3. Запуск haproxy:
@@ -65,20 +65,13 @@ wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
 echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 sudo apt-get update
 sudo apt-get install grafana
+sudo systemctl daemon-reload
+sudo systemctl enable grafana-server.service
 ```
 
 5. Запуск grafana:
 
 ```bash
-sudo systemctl daemon-reload
 sudo systemctl start grafana-server
-sudo systemctl status grafana-server
-sudo systemctl enable grafana-server.service
 ```
 
-
-
-**Полезные ссылки**
-
-1. Сборка и настройка happroxy с модулем для прометея - [ссылка](https://www.haproxy.com/blog/haproxy-exposes-a-prometheus-metrics-endpoint/).
-2. Использование graphana, prometheus, pushgateway для мониторинга CPU load - [ссылка](https://devconnected.com/monitoring-linux-processes-using-prometheus-and-grafana/).
