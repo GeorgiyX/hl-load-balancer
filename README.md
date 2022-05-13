@@ -22,7 +22,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plu
 3. Клонируем репозиторий со скриптами:
 
 ```bash
-git clone git@github.com:GeorgiyX/hl-load-balancer.git
+git clone https://github.com/GeorgiyX/hl-load-balancer.git
 ```
 
 3. Запуск контейнеров с *pushgateway* и *flask*:
@@ -39,3 +39,8 @@ sudo docker compose up
 ```bash
 docker run -p 9090:9090 -v prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ```
+
+**Полезные ссылки**
+
+1. Сборка и настройка happroxy с модулем для прометея - [ссылка](https://www.haproxy.com/blog/haproxy-exposes-a-prometheus-metrics-endpoint/).
+2. Использование graphana, prometheus, pushgateway для мониторинга CPU load - [ссылка](https://devconnected.com/monitoring-linux-processes-using-prometheus-and-grafana/).
