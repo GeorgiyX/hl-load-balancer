@@ -1,0 +1,14 @@
+services:
+  pushgateway:
+    image: prom/pushgateway
+    container_name: "pushgateway"
+    ports:
+      - "9091:9091"
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "flask_backend"
+    ports:
+      - "8080:5000"
