@@ -22,5 +22,6 @@ def factorial(num):
 
 @app.route("/sleep/<int:sleep_time>/<answer>")
 def sleep_and_return(sleep_time, answer):
+    print("")
     time.sleep(sleep_time)
     return "You answer: {}".format(answer)
