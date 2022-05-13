@@ -8,4 +8,4 @@ scrape_configs:
       - targets: ['46.101.109.57:9091', '46.101.220.48:9091', '207.154.241.16:9091']
   - job_name: balancer
     static_configs:
-      - targets: ['172.17.0.1:9091']
+      - targets: ['localhost:9091']
