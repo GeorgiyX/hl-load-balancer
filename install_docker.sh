@@ -11,4 +11,3 @@ sudo apt update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 docker compose build
 
-curl --request GET -sL --url 'http://localhost:9091/metrics'

@@ -53,7 +53,7 @@ screen -dmS prometheus_screen prometheus-2.35.0.linux-amd64/prometheus --config.
 3. Запуск haproxy:
 
 ```bash
-screen -dmS haproxy_screen /root/haproxy/haproxy -f /root/hl-load-balancer/haproxy.cfg
+screen -dmS haproxy_screen /root/haproxy/haproxy -f /root/hl-load-balancer/haproxy.cfg -db
 ```
 
 4. Настройка grafana:
@@ -75,3 +75,14 @@ sudo systemctl enable grafana-server.service
 sudo systemctl start grafana-server
 ```
 
+
+
+**Результаты тестирования**
+
+* C 3:16:00 по 3:17:15 backend-1 перезагружался.  Запросы были распределены между backend-2 backend-3
+
+<img src="/mnt/files/Programming/Python/l4-balancer/.img/cpu_per_backed.png" alt="cpu_per_backed" style="zoom:50%;" />
+
+<img src="/mnt/files/Programming/Python/l4-balancer/.img/rps_per_back.png" alt="rps_per_back" style="zoom:50%;" />
+
+<img src="/mnt/files/Programming/Python/l4-balancer/.img/total_rps.png" alt="total_rps" style="zoom:50%;" />
