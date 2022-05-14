@@ -81,8 +81,8 @@ sudo systemctl start grafana-server
 
 * C 3:16:00 по 3:17:15 backend-1 перезагружался.  Запросы были распределены между backend-2 backend-3
 
-<img src="/mnt/files/Programming/Python/l4-balancer/.img/cpu_per_backed.png" alt="cpu_per_backed" style="zoom:50%;" />
+<img src=".img/cpu_per_backed.png" alt="cpu_per_backed" style="zoom:50%;" />
 
-<img src="/mnt/files/Programming/Python/l4-balancer/.img/rps_per_back.png" alt="rps_per_back" style="zoom:50%;" />
+<img src=".img/rps_per_back.png" alt="rps_per_back" style="zoom:50%;" />
 
-<img src="/mnt/files/Programming/Python/l4-balancer/.img/total_rps.png" alt="total_rps" style="zoom:50%;" />
+<img src=".img/total_rps.png" alt="total_rps" style="zoom:50%;" />
